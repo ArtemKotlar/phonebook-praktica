@@ -17,7 +17,8 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <form onSubmit={this.addContactToContactBook}>
+        <label></label>
         <input
           type="text"
           name="name"
@@ -25,7 +26,8 @@ class App extends Component {
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-      </div>
+        <button type="button">Add contact</button>
+      </form>
     );
   }
 }
