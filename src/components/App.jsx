@@ -46,16 +46,14 @@ class App extends Component {
     );
 
   render() {
+    const filterContacts = this.filterContacts();
     return (
       <div>
         <h1>Phonebook</h1>
         <FormsList onSubmit={this.addContact} />
         <h2>Contacts</h2>
         <Filter onHandleFilter={this.handleFilter} />
-        <ContactsList
-          contacts={this.filterContacts}
-          onDelete={this.deleteContact}
-        />
+        <ContactsList contacts={filterContacts} onDelete={this.deleteContact} />
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import PT from 'prop-types';
 import { Component } from 'react';
 
-// import { Field, Form } from 'formik';
+// import { Form, Formik } from 'formik';
 
 class FormsList extends Component {
   state = {
@@ -43,13 +43,13 @@ class FormsList extends Component {
           <label htmlFor="">
             <p>Number</p>
             <input
-              ttype="tel"
+              type="tel"
               name="number"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
               required
               onChange={this.handleChange}
-              value={this.state.name}
+              value={this.state.number}
             />
           </label>
           <button type="submit">Add contact</button>
