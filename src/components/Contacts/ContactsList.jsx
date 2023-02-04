@@ -1,19 +1,17 @@
 import PT from 'prop-types';
+import { Wraper, Btn } from './Contacts.styled';
 
 const ContactsList = ({ contacts, onDelete }) => {
   return (
     <div>
-      <ul>
+      <Wraper>
         {contacts.map(({ id, name, numder }) => (
           <li key={id} id={id}>
-            <span>{name}:</span>
-            <span>{numder}</span>
-            <button type="button" onClick={() => onDelete(id)}>
-              Delete
-            </button>
+            <span>{name}</span>:<span>{numder}</span>
+            <Btn onClick={() => onDelete(id)}>Delete</Btn>
           </li>
         ))}
-      </ul>
+      </Wraper>
     </div>
   );
 };

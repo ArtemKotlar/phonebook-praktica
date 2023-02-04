@@ -49,9 +49,9 @@ class App extends Component {
     const filterContacts = this.filterContacts();
     return (
       <div>
-        <h1>Phonebook</h1>
+        <h1 style={{ textAlign: 'center' }}>Phonebook</h1>
         <FormsList onSubmit={this.addContact} />
-        <h2>Contacts</h2>
+        <h2 style={{ textAlign: 'center' }}>Contacts</h2>
         <Filter onHandleFilter={this.handleFilter} />
         <ContactsList contacts={filterContacts} onDelete={this.deleteContact} />
       </div>

@@ -1,7 +1,7 @@
+import { Formik } from 'formik';
 import PT from 'prop-types';
 import { Component } from 'react';
-
-// import { Form, Formik } from 'formik';
+import { Wrap, Input, Title, Btn } from './Forms.styled';
 
 class FormsList extends Component {
   state = {
@@ -25,11 +25,11 @@ class FormsList extends Component {
 
   render() {
     return (
-      <div>
-        <form action="" onSubmit={this.handleSudmit}>
+      <Formik>
+        <Wrap action="" onSubmit={this.handleSudmit}>
           <label htmlFor="">
-            <p>Name</p>
-            <input
+            <Title>Name</Title>
+            <Input
               type="text"
               name="name"
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -41,8 +41,8 @@ class FormsList extends Component {
           </label>
 
           <label htmlFor="">
-            <p>Number</p>
-            <input
+            <Title>Number</Title>
+            <Input
               type="tel"
               name="number"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -52,9 +52,9 @@ class FormsList extends Component {
               value={this.state.number}
             />
           </label>
-          <button type="submit">Add contact</button>
-        </form>
-      </div>
+          <Btn type="submit">Add contact</Btn>
+        </Wrap>
+      </Formik>
     );
   }
 }

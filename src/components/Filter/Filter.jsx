@@ -1,13 +1,14 @@
 import PT from 'prop-types';
+import { Wraper, Title, Input } from './Filter.styled';
 
 const Filter = ({ onHandleFilter }) => {
   return (
-    <div>
+    <Wraper>
       <label htmlFor="">
-        Find contacts by name
-        <input type="text" onChange={onHandleFilter} />
+        <Title>Find contacts by name</Title>
+        <Input type="text" onChange={onHandleFilter} />
       </label>
-    </div>
+    </Wraper>
   );
 };
 
