@@ -5,9 +5,9 @@ const ContactsList = ({ contacts, onDelete }) => {
   return (
     <div>
       <Wraper>
-        {contacts.map(({ id, name, numder }) => (
+        {contacts.map(({ id, name, number }) => (
           <li key={id} id={id}>
-            <span>{name}</span>:<span>{numder}</span>
+            <span>{name}</span>:<span>{number}</span>
             <Btn onClick={() => onDelete(id)}>Delete</Btn>
           </li>
         ))}
